@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started - SEO Backlinks Agency</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .hero {
+      min-height: auto;
+      padding-bottom: 4rem;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    
+    .get-started-container {
+      max-width: 800px;
+      margin: 0 auto 4rem auto;
+      padding: 0 2rem;
+    }
+    
+    .get-started-form {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #333;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #eee;
+      border-radius: 8px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: #f9f9f9;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #000;
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+    }
+    
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background: #000;
+      color: white;
+      padding: 1rem 2.5rem;
+      border: 2px solid #000;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    
+    .submit-btn:hover {
+      background: #333;
+    }
+    
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 5px;
+      margin: 1rem 0;
+      color: #000;
+    }
+    
+    .success-message h2 {
+      color: #28a745;
+      margin: 0 0 0.8rem 0;
+      font-size: 1.4rem;
+    }
+    
+    .go-to-reseller {
+      display: inline-block;
+      background: #000;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    
+    .go-to-reseller:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="logo">SEO <span>Backlinks</span> Agency</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+        <br> <br>
+      <h1>Get Started with <span>SEO Backlinks</span></h1>
+      <p>Fill out the form below to begin your journey to better search rankings</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="get-started-container">
+      <form id="getStartedForm" class="get-started-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="website">Website URL</label>
+          <input type="url" id="website" name="website" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Tell us about your project</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit Request</button>
+      </form>
+      
+      <div id="successMessage" class="success-message">
+        <h2>Thank You for Your Interest!</h2>
+        <p>SEO Backlinks Agency is now part of SEOReseller! Go to reseller to access our services and many more - the #1 site for link building.</p>
+        <a href="https://seoreseller.io/" class="go-to-reseller" target="_blank">Go to SEO Reseller</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('getStartedForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // In a real implementation, you would send the form data to a server here
+      document.getElementById('getStartedForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
