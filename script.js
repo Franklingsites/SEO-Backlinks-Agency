@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if(form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Thank you for reaching out! We will contact you soon.');
+      alert('Thank You for Your Interest!\n\nSEO Backlinks Agency is now part of SEOReseller! Head over to SEOReseller to continue buying quality SEO backlinks and access a wide range of powerful link building services – the #1 platform trusted by SEO professionals.');
       form.reset();
     });
   }
